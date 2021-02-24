@@ -6,7 +6,7 @@ order: 401
 
 ## Activar el modo de Producción
 
-Durante el desarrollo, Vue proporciona una gran cantidad de advertencias para ayudarle con errores y problemas comunes. Sin embargo, estas advertencia se vuelven inútiles en producción y aumentan el tamaño de la carga de su aplicación. Además, algunas de estas verificaciones tienen costos de tiempo de ejecución pequeños que pueden evitarse en el modo de producción.
+Durante el desarrollo, Vue proporciona una gran cantidad de advertencias para ayudarle con errores y problemas comunes. Sin embargo, estas advertencias se vuelven inútiles en producción y aumentan el tamaño de la carga de su aplicación. Además, algunas de estas verificaciones tienen costos de tiempo de ejecución pequeños que pueden evitarse en el modo de producción.
 
 ### Sin Herramientas de Compilación
 
@@ -18,7 +18,7 @@ Al usar una herramienta de compilación como Webpack o Browserify, el modo de pr
 
 #### Webpack
 
-En Webpack 4+, puede usar la opación `mode`:
+En Webpack 4+, puede usar la opción `mode`:
 
 ``` js
 module.exports = {
