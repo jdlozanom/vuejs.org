@@ -4,7 +4,7 @@ type: guide
 order: 2
 ---
 
-## Qué es Vue.js?
+## ¿Qué es Vue.js?
 
 Vue (pronunciado /vjuː/, como **view**) es un **framework progresivo** para construir interfaces de usuario. A diferencia de otros _frameworks_ monolíticos, Vue está diseñado desde cero para ser utilizado incrementalmente. La librería central está enfocada solo en la capa de visualización, y es fácil de utilizar e integrar con otras librerías o proyectos existentes. Por otro lado, Vue también es perfectamente capaz de impulsar sofisticadas _Single-Page Applications_ cuando se utiliza en combinación con [herramientas modernas](single-file-components.html) y [librerías de apoyo](https://github.com/vuejs/awesome-vue#components--libraries).
 
