@@ -94,7 +94,7 @@ Los bundlers compatibles ven la definición de `browser` en el package.json y tr
 
 ## ¿Cómo hacer mútiples versiones de mi componente?
 
-No hay necesidad de escribir tus módulos varias veces. Es posible preparar tres versiones de tu módulo en en solo paso, en cuestión de segundos. Este ejemplo usa [Rollup](https://rollupjs.org) debido a su configuración mínima, pero esa comfiguración es posible con otras herramientas de compilación - para más detalles de esta desición [aquí](https://medium.com/webpack/webpack-and-rollup-the-same-but-different-a41ad427058c). La sección de `scripts` del package.json puede ser actualizada con una entrada única por cada objetivo de compilación, y un script `build` más genérico que los ejecute a todos en un solo paso. El package.json de ejemplo luce así:
+No hay necesidad de escribir tus módulos varias veces. Es posible preparar tres versiones de tu módulo en en solo paso, en cuestión de segundos. Este ejemplo usa [Rollup](https://rollupjs.org) debido a su configuración mínima, pero esa configuración es posible con otras herramientas de compilación - para más detalles de esta desición [aquí](https://medium.com/webpack/webpack-and-rollup-the-same-but-different-a41ad427058c). La sección de `scripts` del package.json puede ser actualizada con una entrada única por cada objetivo de compilación, y un script `build` más genérico que los ejecute a todos en un solo paso. El package.json de ejemplo luce así:
 
 ```json
 {
