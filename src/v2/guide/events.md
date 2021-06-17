@@ -175,13 +175,13 @@ Para solucionar este problema, Vue proporciona **modificadores de eventos** para
 
 ``` html
 <!-- Se detendrá la propagación del evento click. -->
-<a v-on:click.stop="hasEsto"></a>
+<a v-on:click.stop="hazEsto"></a>
 
 <!-- El evento de enviar ya no volverá a cargar la página. -->
 <form v-on:submit.prevent="onSubmit"></form>
 
 <!-- Los modificadores pueden encadenarse -->
-<a v-on:click.stop.prevent="hasEsto"></a>
+<a v-on:click.stop.prevent="hazEsto"></a>
 
 <!-- solo el modificador -->
 <form v-on:submit.prevent></form>
@@ -200,7 +200,7 @@ Para solucionar este problema, Vue proporciona **modificadores de eventos** para
 
 ``` html
 <!-- El evento de clic se activará como máximo una vez. -->
-<a v-on:click.once="hasEsto"></a>
+<a v-on:click.once="hazEsto"></a>
 ```
 A diferencia de los otros modificadores, que son exclusivos de los eventos DOM nativos, el modificador `.once` también se puede usar en [eventos personalizados](components-custom-events.html). Si aún no ha leído sobre componentes, no se preocupe de esto por ahora.
 
