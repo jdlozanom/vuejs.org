@@ -12,7 +12,7 @@ Las fugas de memoria en las aplicaciones Vue no suelen provenir de Vue, sino que
 
 ## Ejemplo Sencillo
 
-El siguiente ejemplo muestra una fuga de memoria causada al usar la librería [Choices.js](https://github.com/jshjohnson/Choices) en un componente de Vue y no limpiarlo como corresponde. Luego, se muestra como remover la huella Choices.js y evitar la fuga de memoria.
+El siguiente ejemplo muestra una fuga de memoria causada al usar la librería [Choices.js](https://github.com/jshjohnson/Choices) en un componente de Vue y no limpiarlo como corresponde. Luego, se muestra como eliminar la huella Choices.js y evitar la fuga de memoria.
 
 En el siguiente ejemplo, se carga un select con muchas opciones y luego se usa el botón mostrar/ocultar con la directiva [v-if](/v2/guide/conditional.html) para agregarla y eliminarla del DOM virtual. El problema con este ejemplo es que la directiva `v-if` elimina el elemento padre del DOM, pero no se limpian las piezas de DOM adicionales creadas por Choices.js, lo que provoca una fuga de memoria.
 
@@ -140,7 +140,7 @@ Considere los tipos de dispositivos que pueden estar usando sus usuarios y cuál
 
 En el ejemplo anterior, se usó una directiva `v-if` para ilustrar la fuga de memoria, sin embargo, un escenario muy común en la vida real es cuando se usa [vue-router](https://router.vuejs.org/en/) para rutear a componentes en una aplicación de una sola página (SPA).
 
-Al igual que la directiva `v-if`, `vue-router` remueve elementos del DOM virtual y los reemplaza con nuevos elementos cuando el usuario navega a través de la aplicación. El hook de Vue `beforeDestroy()` [lifecycle hook](/v2/guide/instance.html#Lifecycle-Diagram) es un buen lugar para resolver el mismo tipo de fuga cuando la aplicación usa `vue-router`.
+Al igual que la directiva `v-if`, `vue-router` elimina elementos del DOM virtual y los reemplaza con nuevos elementos cuando el usuario navega a través de la aplicación. El hook de Vue `beforeDestroy()` [lifecycle hook](/v2/guide/instance.html#Lifecycle-Diagram) es un buen lugar para resolver el mismo tipo de fuga cuando la aplicación usa `vue-router`.
 
 Se puede agregar nuestro código en el hook `beforeDestroy()` de la siguiente manera:
 
@@ -152,7 +152,7 @@ beforeDestroy: function () {
 
 ## Patrones Alternativos
 
-Hasta el momento se presenta como manejar la memoria al remover elementos, pero ¿qué tal si intencionalmente se quiere preservar el estado y mantener elementos en memoria? En este caso, se puede usar el componente incorporado [keep-alive](/v2/api/#keep-alive).
+Hasta el momento se presenta como manejar la memoria al eliminar elementos, pero ¿qué tal si intencionalmente se quiere preservar el estado y mantener elementos en memoria? En este caso, se puede usar el componente incorporado [keep-alive](/v2/api/#keep-alive).
 
 Cuando se envuelve a un componente con `keep-alive`, su estado es preservado y por lo tanto mantenido en memoria.
 
